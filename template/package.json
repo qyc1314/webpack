@@ -9,7 +9,7 @@
     "start": "npm run dev",
     "build": "node build/build.js",
     "build--test": "cross-env NODE_ENV=testing env_config=test node build/build.js",
-    "build--prod": "cross-env NODE_ENV=production env_config=prod node build/build.js"
+    "build--prod": "cross-env NODE_ENV=production env_config=prod node build/build.js",
     {{#if_eq runner "jest"}}
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     {{/if_eq}}
