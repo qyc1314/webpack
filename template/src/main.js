@@ -14,6 +14,7 @@ import store from  './store/store'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Vuex){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/vuex}}
 
+//看看配置会不会生效
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
