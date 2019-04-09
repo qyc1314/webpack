@@ -13,7 +13,9 @@ import Vuex from 'vuex'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 import store from  './store/store'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 Vue.use(Vuex){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/vuex}}
-
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
 //看看配置会不会生效
 Vue.config.productionTip = false
 

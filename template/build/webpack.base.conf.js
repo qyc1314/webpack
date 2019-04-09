@@ -8,43 +8,34 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-{{#lint}}const createLintingRule = () => ({
-  test: /\.(js|vue)$/,
-  loader: 'eslint-loader',
-  enforce: 'pre',
-  include: [resolve('src'), resolve('test')],
-  options: {
-    formatter: require('eslint-friendly-formatter'),
-    emitWarning: !config.dev.showEslintErrorsInOverlay
-  }
-}){{/lint}}
+
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.js'
+    app:['babel-polyfill','./src/main.js']
   },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
+    // publicPath: process.env.NODE_ENV === 'production'
+    //   ? config.build.assetsPublicPath
+    //   : config.dev.assetsPublicPath
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+      : (process.env.NODE_ENV === 'testing' ? config.build.assetsPublicPath : config.dev.assetsPublicPath) //增加判断
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      {{#if_eq build "standalone"}}
       'vue$': 'vue/dist/vue.esm.js',
-      {{/if_eq}}
       '@': resolve('src'),
+      'assets': path.resolve(__dirname, '../src/assets'),
+      '@assets': path.resolve(__dirname, '../src/assets'),
     }
   },
   module: {
     rules: [
-      {{#lint}}
-      ...(config.dev.useEslint ? [createLintingRule()] : []),
-      {{/lint}}
       {
         test: /\.vue$/,
         loader: 'vue-loader',
