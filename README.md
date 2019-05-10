@@ -10,11 +10,12 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 执行步骤如下
 
 ##
+``` bash
 $ npm install -g vue-cli
 $ vue init qyc437970808/webpack/qyc437970808 my-project
 $ cd my-project
 $ npm install
 $ npm run dev
-
+```
 ##
 
