@@ -11,7 +11,6 @@ import router from './router'
 import store from './store/index';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-Vue.use(Vuex)
 Vue.use(ElementUI);
 //看看配置会不会生效
 Vue.config.productionTip = false
