@@ -3,11 +3,9 @@
  */
 import axios from 'axios';
 import qs from 'qs'
-import store from '@/store/store';
 import {
   baseUrl
 } from './env';
-import {mapg} from 'vuex'
 
 export default async (url = '', data ={}, type = 'GET') => {
   url = baseUrl + url;
