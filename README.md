@@ -1,4 +1,4 @@
-# vue-webpack-boilerplate(基于vue-cli定制满足自己配置的脚手架,适用于棒谷供应链，支持自定义配置，较为灵活)
+# vue-webpack-boilerplate(基于vue-cli定制满足自己配置的脚手架，支持自定义配置，较为灵活)
 
 
 ## Usage
