@@ -160,7 +160,7 @@ module.exports = {
   filters: {
     '.eslintrc.js': 'lint',
     '.eslintignore': 'lint',
-    'config/test.env.js': 'unit || e2e',
+    // 'config/test.env.js': 'unit || e2e',
     'build/webpack.test.conf.js': "unit && runner === 'karma'",
     'test/unit/**/*': 'unit',
     'test/unit/index.js': "unit && runner === 'karma'",
