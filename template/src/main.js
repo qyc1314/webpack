@@ -8,12 +8,10 @@ import store from './store/index';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
-import 'viewerjs/dist/viewer.css';
-import Viewer from '@/components/common/Viewer/index.js';
+
 
 import { initAllDirective } from '@/components/common/util/directive.js'
 
-Vue.prototype.$viewer = Viewer;
 
 Vue.use(ElementUI);
 //看看配置会不会生效
