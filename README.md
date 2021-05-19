@@ -12,7 +12,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 ##
 ``` bash
 $ npm install -g vue-cli
-$ vue init qychao/webpack#qychao my-project
+$ vue init qychao/webpack my-project
 $ cd my-project
 $ npm install
 $ npm run dev
