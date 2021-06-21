@@ -14,7 +14,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 $ npm install -g vue-cli
 $ vue init qychao/webpack my-project
 $ cd my-project
-$ npm install
+$ npm i
 $ npm run dev
 ```
 ##
